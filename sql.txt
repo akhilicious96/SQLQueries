@@ -1,0 +1,24 @@
+create table orders(
+	mer_name varchar2(20),
+	order_id number(10) primary key,
+	amount number(7),
+	status varchar2(20)
+);
+
+create table inventory(
+	pro_name varchar2(30),
+	pro_price number(7),
+	quantity number(2),
+	category varchar2(20)
+);
+
+INSERT INTO INVENTORY (PRO_NAME, PRO_PRICE, QUANTITY, CATEGORY) VALUES ('Shoes', '600', '8', 'Clothing');
+INSERT INTO INVENTORY (PRO_NAME, PRO_PRICE, QUANTITY, CATEGORY) VALUES ('Watch', '1000', '2', 'electronics');
+INSERT INTO INVENTORY (PRO_NAME, PRO_PRICE, QUANTITY, CATEGORY) VALUES ('Curtain', '500', '5', 'Home Appliances');
+INSERT INTO SYSTEM."INVENTORY" (PRO_NAME, PRO_PRICE, QUANTITY, CATEGORY) VALUES ('Mobile case', '500', '9', 'Mobile');
+
+
+INSERT INTO SYSTEM."PRODUCTORDERS" (MER_NAME, ORDER_ID, AMOUNT, STATUS) VALUES ('Nitish', '102', '500', 'Shipped')
+INSERT INTO SYSTEM."PRODUCTORDERS" (MER_NAME, ORDER_ID, AMOUNT, STATUS) VALUES ('Akhil', '103', '1100', 'Dispatched')
+INSERT INTO SYSTEM."PRODUCTORDERS" (MER_NAME, ORDER_ID, AMOUNT, STATUS) VALUES ('Rahul', '104', '200', 'Shipped')
+
